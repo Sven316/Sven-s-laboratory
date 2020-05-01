@@ -12,4 +12,5 @@ training_data = load_data('demo-rasa.json')
 
 # Create an interpreter by training the model
 interpreter = trainer.train(training_data)
+
 rasa train
