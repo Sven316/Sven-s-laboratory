@@ -13,21 +13,7 @@ training_data = load_data('demo-rasa.json')
 # Create an interpreter by training the model
 interpreter = trainer.train(training_data)
 
-rasa train
-
-from typing import List
-
-from rasa_core_sdk.forms import FormAction, EntityFormField
-from rasa_core_sdk.events import SlotSet
-from requests import (
-    ConnectionError,
-    HTTPError,
-    TooManyRedirects,
-    Timeout
-)
-
 from api import get_weather_by_day
-
 
 class ActionReportWeather(FormAction):
     RANDOMIZE = True
